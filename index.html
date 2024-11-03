@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content=""width+device-width, initial-scale="1.0">
+        <title>Pet Adoption</title>
+    </head>
+    <style>
+      
+   table {
+  font-family: arial, sans-serif;
+  border-collapse:dashed;
+  border:1px solid black;
+  
+  width: 75%;
+}
+
+td, th {
+  border: 1px solid #0f0808;
+  background-color: #96D4D4;
+  text-align: center;
+  padding: 8px;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+    </style>
+        <body style="background-color:#85C030;">
+            <br>
+           
+            <ul>
+                
+                <a href="C:\Users\RowenaMcBeth\Robo\Pet adoption\index.html"><li>Home</li></a>
+                <a href="C:\Users\RowenaMcBeth\Robo\Pet adoption\adopt.html"><li>Adopt a Pet</li></a>
+                
+            </ul>
+            
+            <h1>Welcome to Robogarden Pet Shelter</h1>
+            <p>We serve as home for hundred of pets</p><br>
+            <div class="center">
+            
+            
+            <table>
+                <caption>Robogarden Shelter pets</caption><br><br>
+                <tr>
+                    <th>ID number</th>
+                    <th>Picture</th>
+                    <th>Breed</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                </tr>
+                <tr>
+                    <td>001</td>
+                    <td><img src="data:image/jpeg;base64,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" alt="husky" width="150" height="100"></td>
+                    <td>Husky</td>
+                    <td>Bruno</td>
+                    <td>4</td>
+                    <td>Male</td>
+                </tr>
+                
+                <tr>
+                    <td>002</td>
+                    <td><img src="https://images.wagwalkingweb.com/media/daily_wag/blog_articles/hero/1670938235.1927571/fun-facts-about-labrador-retrievers.jpg" alt="husky" width="150" height="100"></td>
+                    <td>Labrador</td>
+                    <td>Jenny</td>
+                    <td>2</td>
+                    <td>Female</td>
+                </tr>
+
+                <tr>
+                    <td>003</td>
+                    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtJU_aRybhiJnVUitOFKoexK89bvCy4oyB5ACTXE8zUxF8xhVM" alt="husky" width="150" height="100"></td>
+                    <td>Golden Retriever</td>
+                    <td>Paulo</td>
+                    <td>8</td>
+                    <td>Male</td>
+                </tr>
+
+            </table>
+
+        </div>
+   
+        
+    </body>
+    </html>
+    

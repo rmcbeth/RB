@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+ 
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript examples</title>
+  </head>
+ 
+  <body>
+    <h1>Example of Javascript</h1>
+
+    <script>
+        var fruits=["apple", "banana","cherry"];
+        fruits.push("mango");
+        //fruits.pop();
+       fruits.splice(2,1)
+        console.log(fruits);
+//this when i=1 it will run j from 1 to 4, then run i=2 and repeat
+
+for(let i= 1; i<=4; i++){
+  console.log("Outer loop value ", i);
+ for(let j = 1; j<=4; j++){
+     console.log("Inner loop value ", j);// when i=1, j will execute from 1, then k from 1 to 4, then back to j=2, then k from 1 to 4
+     for(let k=1; k<=4; k++){
+        console.log("k value",k);
+     }
+ }
+
+ }
+
+var fruits_array = ["apple", "banana", "cherry", "mangoe"];
+ 
+        for(var index in fruits_array){  //access the index
+            console.log("Index "+index+" value is "+ fruits_array[index]);
+        }
+ 
+        for(var fruit of fruits_array){//  access the value of array
+            console.log(" value is "+ fruit);
+        }
+
+        //2 dimensional array
+        var matrix = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+ 
+        for(let row=0; row<3; row++){
+            for(let col=0; col<3; col++){
+                console.log("Element at (row, col) "+ row + ", "+ col+" :"+ matrix[row][col]);
+            }
+        }
+        for(let i=0; i < 5; i++){
+            console.log("Hello world "+ i);
+        }
+        
+        var index = 5;
+ 
+        while(index>=0){
+            console.log("Hello world "+ index);
+            index--;
+        }
+
+        //break loop to discontinue, continue, to skip operation
+        for(let i=0; i < 5; i++){
+            console.log("Hello world "+ i);
+            if(i==2){
+                break;
+            }
+        }
+        
+        var index = 5;
+ 
+        while(index>=0){
+            if(index==3){
+                index--;
+                continue;
+            }
+        
+            console.log("Hello world "+ index);
+            index--;
+        }
+
+      //  var students=[10,50,80,90];
+      //  for(var mark of students){
+      //      console.log('each mark from the array',mark)
+      //      calculateMarks(mark)
+       // }
+
+       // for(var i=0; i<10; i++){
+       //     console.log(i)
+       // }
+
+       //if number is zero, display zero.If the number is positive, display positive.If the number is negative, display negative
+const number = 12; 
+
+if (number > 0) {
+    console.log("The number is positive");
+} else if (number ==0) {
+    console.log("The number is zero");
+} else {
+    console.log("The number is negative");
+}
+
+
+// compare age
+var age=60;
+
+if (age >= 18 && age <= 60) {
+    console.log("Adult");
+} else if (age <18) {
+    console.log("Minor");
+} else {
+    console.log("Senior citizen");
+}
+
+//declare 3 variables
+
+var A=8;
+var B=16;
+var C=3;
+
+
+if (A>B && A > C) {
+    console.log(" A is largest");
+} else if (B > A && B > C) {
+    console.log("B is the largest");
+} else {
+    console.log("C is the largest");
+}
+// declare array
+let country = ["Canada","USA", "England", "France", "Italy"];
+
+country.forEach(function(country) {
+    console.log(country);
+});
+
+
+for (let i = 0; i < country.length; i++) {
+    console.log(country[i]);
+}
+
+for(let index in country){  //access the index
+            console.log("Index "+index+" value is "+ country[index]);
+        }
+//count the vowels
+function countVowels(char){
+    let count=0;
+    for(let char_value of char){
+        if (char_value === 'a' || char_value === 'e' || char_value === 'i' || char_value=== 'o' || char_value === 'u') { count++ } } 
+return count; } 
+    var char_name="Amazonia";
+    console.log("the vowels are"+countVowels(char_name));
+
+//nested loop
+for(let i= 1; i<=5; i++){
+  console.log("Outer loop value ", i);
+ for(let j = 1; j<=i; j++){
+     console.log("Inner loop value ", j);
+        //console.log("k value",k);
+     }
+ }
+
+//capitalize names in array
+ var fruits_array = ["apple", "banana", "cherry", "date"];
+ 
+        
+        for(let fruit of fruits_array){//  access the value of array
+            console.log(" value is "+ fruit.toUpperCase());
+        }
+//question 8
+//function Color_count(count)
+{
+let colors_array=["blue","green","red","yellow","purple"];
+for(let color of colors_array)
+    {
+       console.log(""+ color.toString);
+    }
+}
+
+var products = [
+            {name: "Laptop", quantity: 3},
+            {name: "Phone", quantity: 10},
+            {name: "Tablet", quantity: 1},
+        ];
+for(let i = 0; i < products.length; i++){
+    console.log("The name of the product is "+ products[i].name +" and the quantity is "+ products[i].quantity);
+        }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+ 
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript examples</title>
+  </head>
+ 
+  <body>
+    <h1>Example of Javascript</h1>
+
+    <script>
+
+const number = 12; 
+
+if (number > 0) {
+    console.log("The number is positive");
+} else if (number ==0) {
+    console.log("The number is zero");
+} else {
+    console.log("The number is negative");
+}
+
+
+// compare age
+var age=60;
+
+if (age >= 18 && age <= 60) {
+    console.log("Adult");
+} else if (age <18) {
+    console.log("Minor");
+} else {
+    console.log("Senior citizen");
+}
+
+//declare 3 variables
+
+var A=8;
+var B=16;
+var C=3;
+
+
+if (A>B && A > C) {
+    console.log(" A is largest");
+} else if (B > A && B > C) {
+    console.log("B is the largest");
+} else {
+    console.log("C is the largest");
+}
+// declare array
+let countryArray = ["Canada","USA", "England", "France", "Italy"];
+
+//country.forEach(function(country) {
+ //   console.log(country);
+//});
+
+
+for (let i = 0; i<countryArray.length; i++) {
+   // console.log(country[i]);
+    let country=countryArray[i];
+    console.log("Value"+ country +   country.length);
+}
+
+//for(let index in country){  //access the index
+  //          console.log("Index "+index+" value is "+ country[index]);
+
+   //     }
+
+
+   //declare array second examples
+   let countryArray1 = ["Canada", "USA", "England", "France", "Italy"];
+ 
+        // for(let i =0; i < countryArray.length; i++){
+        //     let country = countryArray[i];
+        //     console.log("Length of "+ country + " : " + country.length);
+        // }
+ 
+        for(let country of countryArray1){
+            console.log("Length of "+ country + " : " + country.length);
+        }
+//count the vowels
+function countVowels(char){
+    let count=0;
+    for(let char_value of char){
+        if (char_value === 'a' || char_value === 'e' || char_value === 'i' || char_value=== 'o' || char_value === 'u') { count++ } } 
+return count; } // you need this to continue counting since the variable is outside the block code
+
+    var char_name="Amazonia";
+    console.log("the vowels are"+countVowels(char_name));
+
+
+
+//nested loop
+for(let i= 1; i<=5; i++){
+ // console.log("Outer loop value ", i);
+ for(let j = 1; j<=i; j++){
+     console.log(j + " ");
+        //console.log("k value",k);
+     }
+ }
+
+//capitalize names in array
+ var fruits_array = ["apple", "banana", "cherry", "date"];
+ 
+        
+        for(let fruit of fruits_array){//  access the value of array
+            console.log(" value is "+ fruit.toUpperCase());
+        }
+//question 8
+for(let i=0; i<fruits)
+
+//let colors_array= [];
+let color_array = ["blue","green","red","yellow","purple"];
+        for(let color of color_array){
+            //console.log("  "+ color);
+              if(color=='red'){
+        continue;
+      }
+        console.log(color);
+    }
+//skip
+    for(let i=0; i<color_array.length; i++){
+        if(color_array[i]=='red'){
+            continue;
+
+        }
+    }
+//read vowels from two strings
+function checkEqualString(param1, param2){
+            if(param1 === param2){
+                return true;
+            } else{
+                return false;
+            }
+        }
+ 
+        var str1 = "ABCD", str2 = "ABCD";
+        if(checkEqualString(str1, str2) == true){
+            console.log("Both string are same!");
+        } else{
+            console.log("They are not same");
+        }
+
+        //
+        
+        function addEvenNumbers(numbers){
+            let newArray = [];
+            for(let i = 0; i < numbers.length; i++){
+                if(numbers[i] % 2 == 0){
+                    newArray.push(numbers[i]);
+                }
+            }
+ 
+            return newArray;
+        }
+ 
+        var numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+        var newArray = addEvenNumbers(numbers);
+ 
+        for(let i = 0; i < newArray.length; i++){
+            console.log("The value is "+ newArray[i]);
+        }
+ //
+ var products = [
+            {name: "Laptop", quantity: 3},
+            {name: "Phone", quantity: 10},
+            {name: "Tablet", quantity: 1},
+        ];
+        for(let i = 0; i < products.length; i++){
+            console.log("The name of the product is "+ products[i].name +" and the quantity is "+ products[i].quantity);
+        }
+    </script>
+  </body>
+</html>
