@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+ 
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript examples</title>
+  </head>
+ 
+  <body>
+    <h1>Example of Javascript</h1>
+
+
+    <script>
+
+//Reverse string 1
+
+function reverseStrings(array) {
+  let reversedArray = [];
+  for (let i = 0; i < array.length; i++) {
+    let reversedWord = array[i].split("").reverse().join("");
+    reversedArray.push(reversedWord);
+  }
+  return reversedArray;
+}
+
+// Example data
+let words = ["apple", "banana", "cherry"];
+let reversedWords = reverseStrings(words);
+
+console.log(reversedWords); 
+
+
+//Reverse string 2 another method
+function reverseEachString(array) {
+  let reversedArray1 = [];
+  
+  for (let i = 0; i < array.length; i++) {
+    let reversedWord = "";
+    
+    // Reverse each string using another for loop
+    for (let j = array[i].length - 1; j >= 0; j--) {
+      reversedWord += array[i][j];
+    }
+    
+    reversedArray1.push(reversedWord);
+  }
+  
+  return reversedArray1;
+}
+
+// Example data
+let words1 = ["apple", "banana", "cherry"];
+let reversedWords1 = reverseEachString(words1);
+
+console.log(reversedWords); // Output: ["elppa", "ananab", "yrrehc"]
+
+
+//check word occurence
+function checkWord(sentence, word) {
+  // check sentence or word in lowercase or uppercase
+  return sentence.toLowerCase().includes(word.toLowerCase());
+}
+
+// DATA
+let sentence = "She is beautiful";
+let word = "she";
+
+let isWordPresent = checkWord(sentence, word);
+console.log(isWordPresent); // Output: true
+
+//calculate average
+let reviews = [ { user: "Alice", rating: 5 },
+{ user: "Bob", rating: 4 },
+{ user: "Charlie", rating: 3 },
+{ user: "Diana", rating: 5 }, ];
+let totalRating =0;
+
+for (let i = 0; i < reviews.length; i++) {
+  totalRating += reviews[i].rating;
+}
+let averageRating = totalRating / reviews.length;
+console.log("Average rating:", averageRating); // Output: Average Rating: 4.25
+
+
+
+
+
+
+
+    </script>
+    </body>
+    </html>
+
